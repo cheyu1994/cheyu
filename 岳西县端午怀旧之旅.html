@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>岳西县端午怀旧之旅 - 重温青春时光</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', '微软雅黑', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMF8xKSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzBfMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMTIwMCIgeTI9IjYwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNDE3NDY5Ii8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJENTY0QiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><path d="M0,400 Q300,200 600,400 T1200,400 L1200,800 L0,800 Z" fill="%23ffffff" opacity="0.1"/></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .intro-card {
+            background: linear-gradient(145deg, #ffffff, #f7fafc);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(74, 144, 226, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4299e1, #667eea);
+        }
+
+        .intro-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .intro-card h3 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .attraction-card {
+            background: linear-gradient(145deg, #ffffff, #f7fafc);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(74, 144, 226, 0.1);
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .attraction-image {
+            height: 220px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+        }
+
+        .attraction-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><circle cx="50" cy="50" r="20" fill="%23ffffff" opacity="0.1"/><circle cx="150" cy="100" r="15" fill="%23ffffff" opacity="0.1"/><circle cx="250" cy="75" r="25" fill="%23ffffff" opacity="0.1"/><circle cx="350" cy="125" r="10" fill="%23ffffff" opacity="0.1"/></svg>') repeat;
+        }
+
+        .attraction-content {
+            padding: 30px;
+        }
+
+        .attraction-content h3 {
+            color: #2d3748;
+            margin-bottom: 18px;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .itinerary {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            color: #2d3748;
+            position: relative;
+        }
+
+        .itinerary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle cx="100" cy="100" r="2" fill="%234299e1" opacity="0.1"><animate attributeName="opacity" values="0.1;0.3;0.1" dur="3s" repeatCount="indefinite"/></circle><circle cx="300" cy="200" r="1.5" fill="%23667eea" opacity="0.1"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/></circle><circle cx="500" cy="150" r="2.5" fill="%234299e1" opacity="0.1"><animate attributeName="opacity" values="0.1;0.2;0.1" dur="5s" repeatCount="indefinite"/></circle><circle cx="800" cy="250" r="1" fill="%23667eea" opacity="0.1"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="3.5s" repeatCount="indefinite"/></circle><circle cx="1000" cy="300" r="2" fill="%234299e1" opacity="0.1"><animate attributeName="opacity" values="0.1;0.3;0.1" dur="4.5s" repeatCount="indefinite"/></circle></svg>') repeat;
+        }
+
+        .itinerary .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .itinerary .section-title {
+            color: #2d3748;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+        }
+
+        .day-schedule {
+            background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+            margin: 30px 0;
+            border-radius: 20px;
+            padding: 35px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(66, 153, 225, 0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .day-title {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #2d3748;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .day-title::before {
+            content: '📅';
+            font-size: 1.5rem;
+        }
+
+        .time-slot {
+            background: linear-gradient(145deg, rgba(66, 153, 225, 0.08), rgba(102, 126, 234, 0.05));
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #4299e1;
+            border: 1px solid rgba(66, 153, 225, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .time-slot:hover {
+            transform: translateX(10px);
+            background: linear-gradient(145deg, rgba(66, 153, 225, 0.12), rgba(102, 126, 234, 0.08));
+            box-shadow: 0 8px 25px rgba(66, 153, 225, 0.2);
+        }
+
+        .time-slot::before {
+            content: '⏰';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #4299e1;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 10px rgba(66, 153, 225, 0.3);
+        }
+
+        .time {
+            font-weight: bold;
+            color: #2b6cb0;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .time::before {
+            content: '🕐';
+            font-size: 1rem;
+        }
+
+        .activity {
+            margin-top: 15px;
+            color: #4a5568;
+            line-height: 1.7;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+        .activity strong {
+            color: #2b6cb0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .food-card {
+            background: linear-gradient(145deg, #ffffff, #f7fafc);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(74, 144, 226, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .food-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .food-card:hover::before {
+            opacity: 1;
+            animation: shimmer 1.5s ease-in-out;
+        }
+
+        .food-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .food-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .food-card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .tips-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .tip-item {
+            background: linear-gradient(145deg, #ffffff, #f7fafc);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #48bb78;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tip-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .tip-item h4 {
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>岳西县端午怀旧之旅</h1>
+            <p>重温青春时光 · 品味家乡美食 · 感受大别山魅力</p>
+            <a href="#about" class="btn-primary">开启旅程</a>
+        </div>
+    </section>
+
+    <!-- 关于岳西县 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">走进岳西县</h2>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <h3>🏔️ 大别山明珠</h3>
+                    <p>岳西县位于安徽省西南部，大别山腹地，平均海拔600米以上。这里群峰逶迤、林壑幽深、雨水丰沛、气候宜人，被列为国家生态保护示范县，素有"大别山明珠"之称。</p>
+                    <div class="food-card">
+                    <div class="food-icon">🔥</div>
+                    <h3>大转盘烧烤</h3>
+                    <p>夜宵必选，各式烧烤配腌菜炒饭，再来几瓶冰镇啤酒，是岳西夜生活的经典体验。告别晚宴的最佳选择。</p>
+                </div>
+            </div>
+                <div class="intro-card">
+                    <h3>📜 深厚历史文化</h3>
+                    <p>岳西县历史悠久，可追溯至春秋时期。这里是古代吴楚相连之地，承载着深厚的历史文化底蕴。从东汉时期开始种植茶叶，到唐朝时已盛产茶叶，明清时期更是"茶优异，多入贡"。</p>
+                </div>
+                <div class="intro-card">
+                    <h3>🍃 生态天堂</h3>
+                    <p>境内森林覆盖率极高，生物多样性丰富，是天然的大氧吧。独特的地理环境孕育了岳西翠兰、高山茭白等优质农产品，被誉为全国最大的无公害高山茭白基地。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要景点 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">岳西名胜景点</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <div class="attraction-image">🏔️</div>
+                    <div class="attraction-content">
+                        <h3>明堂山风景区</h3>
+                        <p><strong>国家4A级景区</strong><br>因汉武帝封禅古南岳天柱山时设祭拜之"明堂"于此而得名。主峰海拔1563米，拥有华东地区著名的高空玻璃栈道，总长2000米，地面落差达400米，让您体验"云中漫步"的惊险刺激。</p>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image">🌊</div>
+                    <div class="attraction-content">
+                        <h3>天峡风景区</h3>
+                        <p><strong>华东最后一片原始森林</strong><br>位于神秘的北纬30°，素有"华夏醉美大峡谷"之称。这里有千米长的野生杜鹃花海，春季花开时节，漫山遍野的红霞让人心旷神怡，是摄影爱好者的天堂。</p>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image">🏯</div>
+                    <div class="attraction-content">
+                        <h3>司空山</h3>
+                        <p><strong>东吴第一峰</strong><br>海拔1227米，相传战国时期司空淳于氏隐居此山而得名。这里是佛教禅宗临济祖师的寓修地，历史悠久，文化灿烂，山势奇特，风光旖旎。</p>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image">☕</div>
+                    <div class="attraction-content">
+                        <h3>花果山山顶咖啡</h3>
+                        <p><strong>城市制高点的浪漫体验</strong><br>位于岳西县城制高点花果山山顶，这里有一家别具特色的山顶咖啡厅。在清新的山风中品味香醇咖啡，俯瞰整个岳西县城全景，远眺大别山群峰，是放松心情、享受宁静时光的绝佳去处。</p>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image">🏘️</div>
+                    <div class="attraction-content">
+                        <h3>高湾巷历史街区</h3>
+                        <p><strong>承载童年记忆的老街巷</strong><br>岳西县城内保存完好的历史街巷，青石板路、老式建筑诉说着岁月的故事。这里是本地人童年玩耍的地方，巷子里的每一块石板都承载着成长的足迹，是怀旧散步的最佳选择。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行程安排 -->
+    <section class="section itinerary">
+        <div class="container">
+            <h2 class="section-title">两天怀旧行程安排</h2>
+            
+            <div class="day-schedule">
+                <h3 class="day-title">第一天：校园怀旧 + 咖啡时光</h3>
+                <div class="time-slot">
+                    <div class="time">08:00-09:00</div>
+                    <div class="activity">
+                        <strong>🦆 黄尾鸭汤面（早餐）</strong><br>
+                        在从小吃到大的老店品尝记忆中的味道，聊聊童年趣事。经典鸭汤面配咸菜，温暖的家乡味道。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">09:30-11:30</div>
+                    <div class="activity">
+                        <strong>🏫 城关小学怀旧之旅</strong><br>
+                        漫步校园，寻找当年的教室和操场，在熟悉的角落合影留念，分享小学时代的难忘时光。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">12:00-14:00</div>
+                    <div class="activity">
+                        <strong>🏘️ 高湾巷漫步怀旧</strong><br>
+                        在老街巷中慢慢踱步，感受岳西县城的历史韵味。寻找那些承载着童年记忆的老建筑、老店铺，重温小时候在这些巷子里嬉戏玩耍的美好时光。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">14:30-16:30</div>
+                    <div class="activity">
+                        <strong>🎓 新岳西中学参观 + 新建县委党校周边</strong><br>
+                        参观现代化校园，对比青春记忆，感受时代变迁与不变的青春情怀。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">17:00-18:30</div>
+                    <div class="activity">
+                        <strong>☕ 花果山山顶咖啡</strong><br>
+                        登上花果山山顶，在山顶咖啡厅品味香醇咖啡，俯瞰岳西县城全景。在清新的山风中，与发小聊聊人生感悟，享受这份远离城市喧嚣的宁静时光。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">19:30-23:30</div>
+                    <div class="activity">
+                        <strong>🎤 好声音KTV + 🍖 大转盘至尊烧烤</strong><br>
+                        小包间K歌释放情感，深夜烧烤喝啤酒吃腌菜炒饭，回味友情。
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-schedule">
+                <h3 class="day-title">第二天：游戏娱乐 + 告别时光</h3>
+                <div class="time-slot">
+                    <div class="time">08:00-09:00</div>
+                    <div class="activity">
+                        <strong>🦆 黄尾鸭汤面（早餐）</strong><br>
+                        延续第一天的美好体验，再次品味这份温暖的家乡味道。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">09:30-12:00</div>
+                    <div class="activity">
+                        <strong>🌉 落日桥漫步</strong><br>
+                        欣赏家乡风景，在标志性地点留下珍贵合影。感受岳西县的自然美景，为这次旅程留下最美好的回忆。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">14:00-17:30</div>
+                    <div class="activity">
+                        <strong>🎮 小城电竞网吧 - PUBG时光</strong><br>
+                        寻找小岛隐蔽点，享受"苟"的乐趣，游戏中跳舞娱乐，重温青春游戏时光。准备好零食和饮料，尽情享受这份纯真的快乐。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">18:00-19:00</div>
+                    <div class="activity">
+                        <strong>🛍️ 购买特产伴手礼</strong><br>
+                        选购岳西翠兰茶叶、高山茭白等当地特产，为亲朋好友带回一份家乡的味道。
+                    </div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">19:30-22:30</div>
+                    <div class="activity">
+                        <strong>🍻 告别晚宴 - 大转盘至尊烧烤</strong><br>
+                        最丰盛的一顿宵夜，举杯告别家乡，回味两天来的美好时光，约定下次重聚的美好愿望。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色美食 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">岳西特色美食</h2>
+            <div class="food-grid">
+                <div class="food-card">
+                    <div class="food-icon">🦆</div>
+                    <h3>黄尾鸭汤面</h3>
+                    <p>从小吃到大的经典早点，浓郁的鸭汤配上劲道面条，搭配爽口咸菜，是岳西人心中永远的家乡味道。</p>
+                </div>
+                <div class="food-card">
+                    <div class="food-icon">🍃</div>
+                    <h3>岳西翠兰茶</h3>
+                    <p>生长在大别山区的优质云雾茶，1985年被评为全国十一种名茶之一。茶芽形似兰花初放，色泽鲜绿，滋味醇浓爽口，嫩香持久。</p>
+                </div>
+                <div class="food-card">
+                    <div class="food-icon">🥬</div>
+                    <h3>高山茭白</h3>
+                    <p>岳西是全国最大的无公害高山茭白基地。色白味嫩、品质优良，入口有香甜味，是城市居民餐桌上的佳肴。</p>
+                </div>
+                <div class="food-card">
+                    <div class="food-icon">☕</div>
+                    <h3>花果山山顶咖啡</h3>
+                    <p>在岳西县城制高点品味精品咖啡，远眺大别山美景。这里的咖啡香醇浓郁，环境清幽雅致，是和朋友深度交流、放松身心的理想场所。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实用贴士 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">旅行贴士</h2>
+            <div class="tips-list">
+                <div class="tip-item">
+                    <h4>🎒 必备物品</h4>
+                    <p>充电宝（K歌、游戏必备）、相机或手机、舒适的鞋子、少量现金</p>
+                </div>
+                <div class="tip-item">
+                    <h4>📞 预订建议</h4>
+                    <p>提前联系好声音KTV预订小包间，确认小城电竞网吧和大转盘烧烤营业时间</p>
+                </div>
+                <div class="tip-item">
+                    <h4>🚗 交通便利</h4>
+                    <p>岳西县紧邻东香高速和岳武高速，距合肥、武汉等城市均在200公里内</p>
+                </div>
+                <div class="tip-item">
+                    <h4>🏨 住宿推荐</h4>
+                    <p>县城内有多家酒店宾馆，景区周边有特色民宿农家乐可选择</p>
+                </div>
+                <div class="tip-item">
+                    <h4>🌤️ 最佳时节</h4>
+                    <p>端午节期间气候宜人，春末夏初的岳西绿意盎然，是旅游的黄金季节</p>
+                </div>
+                <div class="tip-item">
+                    <h4>🎭 特色体验</h4>
+                    <p>每天的鸭汤面成为固定仪式，KTV小包间私密温馨，网吧游戏重温青春</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 岳西县端午怀旧之旅 | 愿这次旅程为友谊写下最美好的新篇章</p>
+            <p style="margin-top: 10px;">📍 安徽省安庆市岳西县 | 🌟 大别山腹地的璀璨明珠</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <div class="scroll-to-top" id="scrollToTop">
+        ↑
+    </div>
+
+    <script>
+        // 平滑滚动
+        document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#about').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // 返回顶部按钮
+        const scrollToTop = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+
+        scrollToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 添加滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 观察所有卡片元素
+        document.querySelectorAll('.intro-card, .attraction-card, .food-card, .tip-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
